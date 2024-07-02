@@ -19,3 +19,5 @@ User Management
     And the visitor clicks on the login button
     # Step 5 : Vérifier que la connexion est réussie
     Then the user should see the dashboard
+    And the user click on PIM
+    Then the user should see the PIM title
