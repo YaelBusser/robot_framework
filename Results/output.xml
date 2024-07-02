@@ -1,120 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.11 on win32)" generated="20240702 11:42:54.612" rpa="false" schemaversion="4">
-<suite id="s1" name="Examples" source="C:\Users\PC\Desktop\robot_framework\Examples">
-<suite id="s1-s1" name="My First Selenium" source="C:\Users\PC\Desktop\robot_framework\Examples\my_first_selenium.robot">
-<test id="s1-s1-t1" name="My Fisrt Selenium Robot Test" line="12">
-<kw name="Given the visitor go to &quot;https://demo.seleniumeasy.com/basic-first-form-demo.html&quot; on browser &quot;chrome&quot;" library="my_selenium_keywords" sourcename="the visitor go to &quot;${url}&quot; on browser &quot;${browser}&quot;">
+<robot generator="Robot 6.1.1 (Python 3.11.9 on win32)" generated="20240702 12:17:16.366" rpa="false" schemaversion="4">
+<suite id="s1" name="Examples" source="C:\Users\gasti\Desktop\MDS\Qualité &amp; Tests\TP\robot_framework\Examples">
+<suite id="s1-s1" name="User Managment" source="C:\Users\gasti\Desktop\MDS\Qualité &amp; Tests\TP\robot_framework\Examples\user_managment.robot">
+<test id="s1-s1-t1" name="User Management" line="12">
+<kw name="Given the visitor go to &quot;${URL}&quot; on browser &quot;chrome&quot;" library="my_selenium_keywords" sourcename="the visitor go to &quot;${url}&quot; on browser &quot;${browser}&quot;">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240702 11:42:55.146" level="INFO">Opening browser 'chrome' to base url 'https://demo.seleniumeasy.com/basic-first-form-demo.html'.</msg>
-<status status="PASS" starttime="20240702 11:42:55.146" endtime="20240702 11:42:59.822"/>
+<msg timestamp="20240702 12:17:16.729" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20240702 12:17:16.728" endtime="20240702 12:17:19.833"/>
 </kw>
-<status status="PASS" starttime="20240702 11:42:55.146" endtime="20240702 11:42:59.822"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240702 12:17:19.833" endtime="20240702 12:17:19.869"/>
 </kw>
-<kw name="When the visitor fills the first form" library="my_selenium_keywords">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@id="user-message"]</arg>
-<arg>${MESSAGE}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240702 11:42:59.822" level="INFO">Typing text 'Lorem Ipsum' into text field '//input[@id="user-message"]'.</msg>
-<status status="PASS" starttime="20240702 11:42:59.822" endtime="20240702 11:42:59.976"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@placeholder="Username"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240702 12:17:19.869" endtime="20240702 12:17:20.225"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//button[text()="Show Message"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240702 11:42:59.976" level="INFO">Clicking element '//button[text()="Show Message"]'.</msg>
-<status status="PASS" starttime="20240702 11:42:59.976" endtime="20240702 11:43:00.058"/>
+<status status="PASS" starttime="20240702 12:17:16.727" endtime="20240702 12:17:20.225"/>
 </kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>//*[@id="display"]</arg>
-<arg>${MESSAGE}</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20240702 11:43:00.092" level="INFO">Element '//*[@id="display"]' contains text 'Lorem Ipsum'.</msg>
-<status status="PASS" starttime="20240702 11:43:00.058" endtime="20240702 11:43:00.100"/>
-</kw>
-<status status="PASS" starttime="20240702 11:42:59.822" endtime="20240702 11:43:00.100"/>
-</kw>
-<kw name="And the visitor fills the second form" library="my_selenium_keywords">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//*[@id="value1"]</arg>
-<arg>${VALUE_1}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240702 11:43:00.100" level="INFO">Typing text '10' into text field '//*[@id="value1"]'.</msg>
-<status status="PASS" starttime="20240702 11:43:00.100" endtime="20240702 11:43:00.232"/>
+<kw name="When the visitor fills the username with &quot;${USERNAME}&quot;" library="my_selenium_keywords" sourcename="the visitor fills the username with &quot;${username}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@placeholder="Username"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240702 12:17:20.225" endtime="20240702 12:17:20.277"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>//*[@id="value2"]</arg>
-<arg>${VALUE_2}</arg>
+<arg>//input[@placeholder="Username"]</arg>
+<arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240702 11:43:00.235" level="INFO">Typing text '5' into text field '//*[@id="value2"]'.</msg>
-<status status="PASS" starttime="20240702 11:43:00.232" endtime="20240702 11:43:00.363"/>
+<msg timestamp="20240702 12:17:20.278" level="INFO">Typing text 'Admin' into text field '//input[@placeholder="Username"]'.</msg>
+<status status="PASS" starttime="20240702 12:17:20.277" endtime="20240702 12:17:20.501"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//button[text()="Get Total"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240702 11:43:00.363" level="INFO">Clicking element '//button[text()="Get Total"]'.</msg>
-<status status="PASS" starttime="20240702 11:43:00.363" endtime="20240702 11:43:00.443"/>
+<status status="PASS" starttime="20240702 12:17:20.225" endtime="20240702 12:17:20.501"/>
 </kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>//*[@id="displayvalue"]</arg>
-<arg>${${VALUE_1}+${VALUE_2}}</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20240702 11:43:00.476" level="INFO">Element '//*[@id="displayvalue"]' contains text '15'.</msg>
-<status status="PASS" starttime="20240702 11:43:00.443" endtime="20240702 11:43:00.476"/>
+<kw name="And the visitor fills the password with &quot;${PASSWORD}&quot;" library="my_selenium_keywords" sourcename="the visitor fills the password with &quot;${password}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@placeholder="Password"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240702 12:17:20.503" endtime="20240702 12:17:20.534"/>
 </kw>
-<status status="PASS" starttime="20240702 11:43:00.100" endtime="20240702 11:43:00.476"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder="Password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240702 12:17:20.535" level="INFO">Typing text 'admin123' into text field '//input[@placeholder="Password"]'.</msg>
+<status status="PASS" starttime="20240702 12:17:20.534" endtime="20240702 12:17:20.727"/>
 </kw>
-<kw name="Then all values are correctly sended" library="my_selenium_keywords">
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${excepted_message}</var>
-<arg>//*[@id="display"]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240702 11:43:00.492" level="INFO">${excepted_message} = Lorem Ipsum</msg>
-<status status="PASS" starttime="20240702 11:43:00.476" endtime="20240702 11:43:00.492"/>
+<status status="PASS" starttime="20240702 12:17:20.502" endtime="20240702 12:17:20.727"/>
 </kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${excepted_value}</var>
-<arg>//*[@id="displayvalue"]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240702 11:43:00.518" level="INFO">${excepted_value} = 15</msg>
-<status status="PASS" starttime="20240702 11:43:00.492" endtime="20240702 11:43:00.518"/>
+<kw name="And the visitor clicks on the login button" library="my_selenium_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[@type="submit"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240702 12:17:20.728" endtime="20240702 12:17:20.754"/>
 </kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${excepted_message}</arg>
-<arg>${MESSAGE}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20240702 11:43:00.518" endtime="20240702 11:43:00.518"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240702 12:17:20.755" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20240702 12:17:20.754" endtime="20240702 12:17:20.833"/>
 </kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${excepted_value}</arg>
-<arg>${${VALUE_1}+${VALUE_2}}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20240702 11:43:00.518" level="INFO">Argument types are:
-&lt;class 'str'&gt;
-&lt;class 'int'&gt;</msg>
-<status status="PASS" starttime="20240702 11:43:00.518" endtime="20240702 11:43:00.518"/>
+<status status="PASS" starttime="20240702 12:17:20.728" endtime="20240702 12:17:20.833"/>
 </kw>
-<status status="PASS" starttime="20240702 11:43:00.476" endtime="20240702 11:43:00.518"/>
+<kw name="Then the user should see the dashboard" library="my_selenium_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//span[text()="Dashboard"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240702 12:17:20.834" endtime="20240702 12:17:22.583"/>
 </kw>
-<tag>my_first_selenium</tag>
-<status status="PASS" starttime="20240702 11:42:55.146" endtime="20240702 11:43:00.518"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240702 12:17:25.584" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240702 12:17:22.584" endtime="20240702 12:17:25.584"/>
+</kw>
+<status status="PASS" starttime="20240702 12:17:20.834" endtime="20240702 12:17:25.585"/>
+</kw>
+<tag>user_managment</tag>
+<status status="PASS" starttime="20240702 12:17:16.726" endtime="20240702 12:17:25.585"/>
 </test>
-<status status="PASS" starttime="20240702 11:42:54.653" endtime="20240702 11:43:00.518"/>
+<status status="PASS" starttime="20240702 12:17:16.419" endtime="20240702 12:17:25.587"/>
 </suite>
-<status status="PASS" starttime="20240702 11:42:54.612" endtime="20240702 11:43:00.527"/>
+<status status="PASS" starttime="20240702 12:17:16.370" endtime="20240702 12:17:25.588"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">my_first_selenium</stat>
+<stat pass="1" fail="0" skip="0">user_managment</stat>
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Examples">Examples</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="My First Selenium">Examples.My First Selenium</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="User Managment">Examples.User Managment</stat>
 </suite>
 </statistics>
 <errors>
