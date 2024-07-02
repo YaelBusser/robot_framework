@@ -22,4 +22,22 @@ User Management
     And the user click on PIM
     Then the user should see the PIM title
     And Click Add Button
-
+    Then the user should see the Add Employee
+    And Click Switch
+    Then the user should see the label Username
+    And the user fills first name for employee
+    And the user fills middle name for employee
+    And the user fills last name for employee
+    And the user fills username for employee
+    And the user fills the password for employee
+    And the user fills the confirm password for employee
+    Then the user click on save button
+    And the user click on PIM
+    Then the user should see the PIM title
+    And the user enters employee name
+    And the user click on search button
+    Then the user edit nickname for employee
+    And the user click on save button for edit nickname
+    And the user click on PIM
+    Then the user should see the PIM title
+    And the user click on delete button
