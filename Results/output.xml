@@ -1,91 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.11 on win32)" generated="20240702 13:48:27.097" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.10.11 on win32)" generated="20240702 14:03:46.803" rpa="false" schemaversion="4">
 <suite id="s1" name="Examples" source="C:\Users\PC\Desktop\robot_framework\Examples">
 <suite id="s1-s1" name="Employe Managment" source="C:\Users\PC\Desktop\robot_framework\Examples\employe_managment.robot">
-<test id="s1-s1-t1" name="User Management" line="8">
-<kw name="Given the visitor go to &quot;${URL}&quot; on browser &quot;chrome&quot;" library="employe_managment_keywords" sourcename="the visitor go to &quot;${url}&quot; on browser &quot;${browser}&quot;">
+<test id="s1-s1-t1" name="User Management" line="9">
+<kw name="Given the visitor go to &quot;${URL}&quot; on browser &quot;chrome&quot;" library="connexion_keywords" sourcename="the visitor go to &quot;${url}&quot; on browser &quot;${browser}&quot;">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240702 13:48:27.475" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<status status="PASS" starttime="20240702 13:48:27.475" endtime="20240702 13:48:30.105"/>
+<msg timestamp="20240702 14:03:47.569" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20240702 14:03:47.567" endtime="20240702 14:03:49.966"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240702 13:48:30.106" endtime="20240702 13:48:30.142"/>
+<status status="PASS" starttime="20240702 14:03:49.966" endtime="20240702 14:03:52.150"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//input[@placeholder="Username"]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240702 13:48:30.142" endtime="20240702 13:48:30.483"/>
+<status status="PASS" starttime="20240702 14:03:52.151" endtime="20240702 14:03:52.537"/>
 </kw>
-<status status="PASS" starttime="20240702 13:48:27.474" endtime="20240702 13:48:30.483"/>
+<status status="PASS" starttime="20240702 14:03:47.565" endtime="20240702 14:03:52.537"/>
 </kw>
-<kw name="When the visitor fills the username with &quot;${USERNAME}&quot;" library="employe_managment_keywords" sourcename="the visitor fills the username with &quot;${username}&quot;">
+<kw name="When the visitor fills the username with &quot;${USERNAME}&quot;" library="connexion_keywords" sourcename="the visitor fills the username with &quot;${username}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//input[@placeholder="Username"]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240702 13:48:30.486" endtime="20240702 13:48:30.518"/>
+<status status="PASS" starttime="20240702 14:03:52.540" endtime="20240702 14:03:52.630"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//input[@placeholder="Username"]</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240702 13:48:30.520" level="INFO">Typing text 'Admin' into text field '//input[@placeholder="Username"]'.</msg>
-<status status="PASS" starttime="20240702 13:48:30.518" endtime="20240702 13:48:30.646"/>
+<msg timestamp="20240702 14:03:52.631" level="INFO">Typing text 'Admin' into text field '//input[@placeholder="Username"]'.</msg>
+<status status="PASS" starttime="20240702 14:03:52.630" endtime="20240702 14:03:52.909"/>
 </kw>
-<status status="PASS" starttime="20240702 13:48:30.484" endtime="20240702 13:48:30.646"/>
+<status status="PASS" starttime="20240702 14:03:52.539" endtime="20240702 14:03:52.909"/>
 </kw>
-<kw name="And the visitor fills the password with &quot;${PASSWORD}&quot;" library="employe_managment_keywords" sourcename="the visitor fills the password with &quot;${password}&quot;">
+<kw name="And the visitor fills the password with &quot;${PASSWORD}&quot;" library="connexion_keywords" sourcename="the visitor fills the password with &quot;${password}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//input[@placeholder="Password"]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240702 13:48:30.647" endtime="20240702 13:48:30.681"/>
+<status status="PASS" starttime="20240702 14:03:52.934" endtime="20240702 14:03:52.975"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//input[@placeholder="Password"]</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240702 13:48:30.682" level="INFO">Typing text 'admin123' into text field '//input[@placeholder="Password"]'.</msg>
-<status status="PASS" starttime="20240702 13:48:30.681" endtime="20240702 13:48:30.875"/>
+<msg timestamp="20240702 14:03:52.976" level="INFO">Typing text 'admin123' into text field '//input[@placeholder="Password"]'.</msg>
+<status status="PASS" starttime="20240702 14:03:52.975" endtime="20240702 14:03:53.167"/>
 </kw>
-<status status="PASS" starttime="20240702 13:48:30.647" endtime="20240702 13:48:30.875"/>
+<status status="PASS" starttime="20240702 14:03:52.933" endtime="20240702 14:03:53.167"/>
 </kw>
-<kw name="And the visitor clicks on the login button" library="employe_managment_keywords">
+<kw name="And the visitor clicks on the login button" library="connexion_keywords">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//button[@type="submit"]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240702 13:48:30.878" endtime="20240702 13:48:30.915"/>
+<status status="PASS" starttime="20240702 14:03:53.176" endtime="20240702 14:03:53.212"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//button[@type="submit"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240702 13:48:30.916" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
-<status status="PASS" starttime="20240702 13:48:30.915" endtime="20240702 13:48:31.925"/>
+<msg timestamp="20240702 14:03:53.213" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20240702 14:03:53.212" endtime="20240702 14:03:53.403"/>
 </kw>
-<status status="PASS" starttime="20240702 13:48:30.876" endtime="20240702 13:48:31.925"/>
+<status status="PASS" starttime="20240702 14:03:53.176" endtime="20240702 14:03:53.403"/>
 </kw>
-<kw name="Then the user should see the dashboard" library="employe_managment_keywords">
+<kw name="Then the user should see the dashboard" library="connexion_keywords">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//span[text()="Dashboard"]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240702 13:48:31.926" endtime="20240702 13:48:32.221"/>
+<status status="PASS" starttime="20240702 14:03:53.432" endtime="20240702 14:03:54.767"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240702 13:48:35.223" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20240702 13:48:32.221" endtime="20240702 13:48:35.223"/>
+<msg timestamp="20240702 14:03:57.771" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240702 14:03:54.767" endtime="20240702 14:03:57.771"/>
 </kw>
-<status status="PASS" starttime="20240702 13:48:31.925" endtime="20240702 13:48:35.223"/>
+<status status="PASS" starttime="20240702 14:03:53.432" endtime="20240702 14:03:57.771"/>
 </kw>
 <tag>employe_managment</tag>
-<status status="PASS" starttime="20240702 13:48:27.473" endtime="20240702 13:48:35.224"/>
+<status status="PASS" starttime="20240702 14:03:47.562" endtime="20240702 14:03:57.772"/>
 </test>
-<status status="PASS" starttime="20240702 13:48:27.132" endtime="20240702 13:48:35.226"/>
+<status status="PASS" starttime="20240702 14:03:46.863" endtime="20240702 14:03:57.774"/>
 </suite>
-<status status="PASS" starttime="20240702 13:48:27.100" endtime="20240702 13:48:35.228"/>
+<status status="PASS" starttime="20240702 14:03:46.806" endtime="20240702 14:03:57.777"/>
 </suite>
 <statistics>
 <total>

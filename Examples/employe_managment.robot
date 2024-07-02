@@ -2,6 +2,7 @@
 Library     SeleniumLibrary
 Library     BuiltIn
 Resource    connexion_keywords.robot
+Resource    connexion_variables.robot
 Resource    employe_managment_keywords.robot
 Resource    employe_managment_variables.robot
 
