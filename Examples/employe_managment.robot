@@ -21,3 +21,5 @@ User Management
     Then the user should see the dashboard
     And the user click on PIM
     Then the user should see the PIM title
+    And Click Add Button
+
