@@ -1,3 +1,4 @@
 *** Variables ***
-${ADMIN_USERNAME}    Admin
-${ADMIN_PASSWORD}    admin123
+${URL}              https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+${USERNAME}         Admin
+${PASSWORD}         admin123

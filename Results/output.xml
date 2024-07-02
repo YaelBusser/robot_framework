@@ -1,98 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.11 on win32)" generated="20240702 13:31:05.879" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.10.11 on win32)" generated="20240702 13:34:11.449" rpa="false" schemaversion="4">
 <suite id="s1" name="Examples" source="C:\Users\PC\Desktop\robot_framework\Examples">
-<suite id="s1-s1" name="My Second Selenium" source="C:\Users\PC\Desktop\robot_framework\Examples\my_second_selenium.robot">
-<test id="s1-s1-t1" name="User Management in OrangeHRM" line="20">
-<kw name="Given the visitor go to &quot;${URL}&quot; on browser &quot;${BROWSER}&quot;" sourcename="the visitor go to &quot;${url}&quot; on browser &quot;${browser}&quot;">
+<suite id="s1-s1" name="User Managment" source="C:\Users\PC\Desktop\robot_framework\Examples\user_managment.robot">
+<test id="s1-s1-t1" name="User Management" line="8">
+<kw name="Given the visitor go to &quot;${URL}&quot; on browser &quot;chrome&quot;" library="user_managment_keywords" sourcename="the visitor go to &quot;${url}&quot; on browser &quot;${browser}&quot;">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240702 13:31:06.263" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<status status="PASS" starttime="20240702 13:31:06.263" endtime="20240702 13:31:11.633"/>
+<msg timestamp="20240702 13:34:11.825" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20240702 13:34:11.825" endtime="20240702 13:34:15.397"/>
 </kw>
-<status status="PASS" starttime="20240702 13:31:06.263" endtime="20240702 13:31:11.633"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240702 13:34:15.397" endtime="20240702 13:34:15.439"/>
 </kw>
-<kw name="When the visitor logs in with username &quot;${ADMIN_USERNAME}&quot; and password &quot;${ADMIN_PASSWORD}&quot;" sourcename="the visitor logs in with username &quot;${username}&quot; and password &quot;${password}&quot;">
-<msg timestamp="20240702 13:31:11.633" level="FAIL">Variable '${ADMIN_USERNAME}' not found.</msg>
-<status status="FAIL" starttime="20240702 13:31:11.633" endtime="20240702 13:31:11.633"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@placeholder="Username"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240702 13:34:15.439" endtime="20240702 13:34:15.832"/>
 </kw>
-<kw name="And the visitor adds a new user with employee name &quot;${EMPLOYEE_NAME}&quot;, username &quot;${USER_NAME}&quot;, password &quot;${USER_PASSWORD}&quot;, role &quot;${ROLE}&quot;, and status &quot;${STATUS}&quot;" sourcename="the visitor adds a new user with employee name &quot;${employee_name}&quot;, username &quot;${username}&quot;, password &quot;${password}&quot;, role &quot;${role}&quot;, and status &quot;${status}&quot;">
-<status status="NOT RUN" starttime="20240702 13:31:11.633" endtime="20240702 13:31:11.633"/>
+<status status="PASS" starttime="20240702 13:34:11.825" endtime="20240702 13:34:15.832"/>
 </kw>
-<kw name="Then the visitor should see the user &quot;${USER_NAME}&quot; in the user list" sourcename="the visitor should see the user &quot;${username}&quot; in the user list">
-<status status="NOT RUN" starttime="20240702 13:31:11.633" endtime="20240702 13:31:11.633"/>
+<kw name="When the visitor fills the username with &quot;${USERNAME}&quot;" library="user_managment_keywords" sourcename="the visitor fills the username with &quot;${username}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@placeholder="Username"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240702 13:34:15.832" endtime="20240702 13:34:15.875"/>
 </kw>
-<kw name="When the visitor edits the user &quot;${USER_NAME}&quot; to role &quot;${NEW_ROLE}&quot;" sourcename="the visitor edits the user &quot;${username}&quot; to role &quot;${role}&quot;">
-<status status="NOT RUN" starttime="20240702 13:31:11.633" endtime="20240702 13:31:11.633"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder="Username"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240702 13:34:15.875" level="INFO">Typing text 'Admin' into text field '//input[@placeholder="Username"]'.</msg>
+<status status="PASS" starttime="20240702 13:34:15.875" endtime="20240702 13:34:16.117"/>
 </kw>
-<kw name="Then the visitor should see the user &quot;${USER_NAME}&quot; with role &quot;${NEW_ROLE}&quot; in the user list" sourcename="the visitor should see the user &quot;${username}&quot; with role &quot;${role}&quot; in the user list">
-<status status="NOT RUN" starttime="20240702 13:31:11.641" endtime="20240702 13:31:11.641"/>
+<status status="PASS" starttime="20240702 13:34:15.832" endtime="20240702 13:34:16.117"/>
 </kw>
-<kw name="When the visitor deletes the user &quot;${USER_NAME}&quot;" sourcename="the visitor deletes the user &quot;${username}&quot;">
-<status status="NOT RUN" starttime="20240702 13:31:11.641" endtime="20240702 13:31:11.641"/>
+<kw name="And the visitor fills the password with &quot;${PASSWORD}&quot;" library="user_managment_keywords" sourcename="the visitor fills the password with &quot;${password}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//input[@placeholder="Password"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240702 13:34:16.119" endtime="20240702 13:34:16.171"/>
 </kw>
-<kw name="Then the visitor should not see the user &quot;${USER_NAME}&quot; in the user list" sourcename="the visitor should not see the user &quot;${username}&quot; in the user list">
-<status status="NOT RUN" starttime="20240702 13:31:11.641" endtime="20240702 13:31:11.641"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@placeholder="Password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240702 13:34:16.171" level="INFO">Typing text 'admin123' into text field '//input[@placeholder="Password"]'.</msg>
+<status status="PASS" starttime="20240702 13:34:16.171" endtime="20240702 13:34:16.311"/>
 </kw>
-<kw name="And the visitor logs out">
-<status status="NOT RUN" starttime="20240702 13:31:11.641" endtime="20240702 13:31:11.641"/>
+<status status="PASS" starttime="20240702 13:34:16.118" endtime="20240702 13:34:16.311"/>
 </kw>
-<tag>user_management</tag>
-<status status="FAIL" starttime="20240702 13:31:06.263" endtime="20240702 13:31:11.641">Variable '${ADMIN_USERNAME}' not found.</status>
+<kw name="And the visitor clicks on the login button" library="user_managment_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//button[@type="submit"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240702 13:34:16.311" endtime="20240702 13:34:16.341"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240702 13:34:16.341" level="INFO">Clicking button '//button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20240702 13:34:16.341" endtime="20240702 13:34:16.423"/>
+</kw>
+<status status="PASS" starttime="20240702 13:34:16.311" endtime="20240702 13:34:16.423"/>
+</kw>
+<kw name="Then the user should see the dashboard" library="user_managment_keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//span[text()="Dashboard"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240702 13:34:16.423" endtime="20240702 13:34:17.692"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240702 13:34:20.698" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240702 13:34:17.692" endtime="20240702 13:34:20.698"/>
+</kw>
+<status status="PASS" starttime="20240702 13:34:16.423" endtime="20240702 13:34:20.699"/>
+</kw>
+<tag>user_managment</tag>
+<status status="PASS" starttime="20240702 13:34:11.825" endtime="20240702 13:34:20.699"/>
 </test>
-<status status="FAIL" starttime="20240702 13:31:05.912" endtime="20240702 13:31:11.641"/>
+<status status="PASS" starttime="20240702 13:34:11.483" endtime="20240702 13:34:20.700"/>
 </suite>
-<suite id="s1-s2" name="User Managment" source="C:\Users\PC\Desktop\robot_framework\Examples\user_managment.robot">
-<test id="s1-s2-t1" name="User Management Test" line="6">
-<kw name="Given I am on the OrangeHRM login page">
-<msg timestamp="20240702 13:31:11.657" level="FAIL">No keyword with name 'Given I am on the OrangeHRM login page' found.</msg>
-<status status="FAIL" starttime="20240702 13:31:11.657" endtime="20240702 13:31:11.657"/>
-</kw>
-<kw name="When I log in with username &quot;${ADMIN_USERNAME}&quot; and password &quot;${ADMIN_PASSWORD}&quot;">
-<status status="NOT RUN" starttime="20240702 13:31:11.665" endtime="20240702 13:31:11.665"/>
-</kw>
-<kw name="And I wait for 10 seconds">
-<status status="NOT RUN" starttime="20240702 13:31:11.665" endtime="20240702 13:31:11.665"/>
-</kw>
-<kw name="And I log out">
-<status status="NOT RUN" starttime="20240702 13:31:11.665" endtime="20240702 13:31:11.665"/>
-</kw>
-<tag>user_management</tag>
-<status status="FAIL" starttime="20240702 13:31:11.657" endtime="20240702 13:31:11.665">No keyword with name 'Given I am on the OrangeHRM login page' found.</status>
-</test>
-<status status="FAIL" starttime="20240702 13:31:11.649" endtime="20240702 13:31:11.665"/>
-</suite>
-<status status="FAIL" starttime="20240702 13:31:05.879" endtime="20240702 13:31:11.674"/>
+<status status="PASS" starttime="20240702 13:34:11.449" endtime="20240702 13:34:20.700"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="2" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="2" skip="0">user_management</stat>
+<stat pass="1" fail="0" skip="0">user_managment</stat>
 </tag>
 <suite>
-<stat pass="0" fail="2" skip="0" id="s1" name="Examples">Examples</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="My Second Selenium">Examples.My Second Selenium</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s2" name="User Managment">Examples.User Managment</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Examples">Examples</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="User Managment">Examples.User Managment</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20240702 13:31:05.921" level="ERROR">Error in file 'C:\Users\PC\Desktop\robot_framework\Examples\my_second_selenium.robot' on line 10: Setting variable '${ADMIN_USERNAME} Admin' failed: Invalid variable name '${ADMIN_USERNAME} Admin'.</msg>
-<msg timestamp="20240702 13:31:05.921" level="ERROR">Error in file 'C:\Users\PC\Desktop\robot_framework\Examples\my_second_selenium.robot' on line 11: Setting variable '${ADMIN_PASSWORD} admin123' failed: Invalid variable name '${ADMIN_PASSWORD} admin123'.</msg>
-<msg timestamp="20240702 13:31:06.263" level="ERROR">Error in file 'C:\Users\PC\Desktop\robot_framework\Examples\my_second_selenium.robot' on line 5: Resource file 'user_management_keywords.robot' does not exist.</msg>
-<msg timestamp="20240702 13:31:11.649" level="ERROR">Error in file 'C:\Users\PC\Desktop\robot_framework\Examples\user_managment.robot' on line 2: Resource file 'user_management_keywords.robot' does not exist.</msg>
-<msg timestamp="20240702 13:31:11.657" level="ERROR">Error in file 'C:\Users\PC\Desktop\robot_framework\Examples\user_managment.robot' on line 3: Processing variable file 'variables.robot' failed: Importing variable file 'variables.robot' failed: ModuleNotFoundError: No module named 'variables'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\PC\Desktop\robot_framework
-  C:\Python310\python310.zip
-  C:\Python310\DLLs
-  C:\Python310\lib
-  C:\Python310
-  C:\Users\PC\Desktop\robot_framework\.venv
-  C:\Users\PC\Desktop\robot_framework\.venv\lib\site-packages</msg>
 </errors>
 </robot>
