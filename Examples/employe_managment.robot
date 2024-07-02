@@ -2,12 +2,12 @@
 Library     SeleniumLibrary
 Library     BuiltIn
 Resource    connexion_keywords.robot
-Resource    user_managment_keywords.robot
-Resource    user_managment_variables.robot
+Resource    employe_managment_keywords.robot
+Resource    employe_managment_variables.robot
 
 *** Test Cases ***
 User Management
-    [Tags]    user_managment
+    [Tags]    employe_managment
     # Step 1 : Aller sur le site https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
     Given the visitor go to "${URL}" on browser "chrome"
     # Step 2 : Remplir le champ Username
