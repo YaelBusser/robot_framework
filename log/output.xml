@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.11 on win32)" generated="2024-07-02T12:08:58.610361" rpa="false" schemaversion="5">
+<suite id="s1" name="User Managment" source="C:\Users\PC\Desktop\robot_framework\Examples\user_managment.robot">
+<kw name="Open Browser to Login Page" type="SETUP">
+<msg time="2024-07-02T12:08:58.793713" level="FAIL">No keyword with name 'Open Browser to Login Page' found.</msg>
+<status status="FAIL" start="2024-07-02T12:08:58.793713" elapsed="0.000000">No keyword with name 'Open Browser to Login Page' found.</status>
+</kw>
+<test id="s1-t1" name="@user_management" line="22">
+<status status="FAIL" start="2024-07-02T12:08:58.793713" elapsed="0.000000">Parent suite setup failed:
+No keyword with name 'Open Browser to Login Page' found.</status>
+</test>
+<kw name="Close Browser" type="TEARDOWN">
+<msg time="2024-07-02T12:08:58.801714" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" start="2024-07-02T12:08:58.801714" elapsed="0.000000">No keyword with name 'Close Browser' found.</status>
+</kw>
+<doc>Test de gestion des utilisateurs dans OrangeHRM</doc>
+<status status="FAIL" start="2024-07-02T12:08:58.620325" elapsed="0.181389">Suite setup failed:
+No keyword with name 'Open Browser to Login Page' found.
+
+Also suite teardown failed:
+No keyword with name 'Close Browser' found.</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="User Managment">User Managment</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-07-02T12:08:58.781146" level="ERROR">Error in file 'C:\Users\PC\Desktop\robot_framework\Examples\user_managment.robot' on line 7: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\PC\AppData\Roaming\JetBrains\Aqua2024.1\plugins\robotframework-intellij\lib\robotframework_debug_adapter
+  C:\Users\PC\Desktop\robot_framework
+  C:\Users\PC\AppData\Roaming\JetBrains\Aqua2024.1\plugins\robotframework-intellij\lib
+  C:\Users\PC\AppData\Roaming\JetBrains\Aqua2024.1\plugins\robotframework-intellij\lib\robotframework_ls\vendored
+  C:\Python310\python310.zip
+  C:\Python310\DLLs
+  C:\Python310\lib
+  C:\Python310
+  C:\Python310\lib\site-packages</msg>
+</errors>
+</robot>

@@ -1,122 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.11 on win32)" generated="20240702 11:42:54.612" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.10.11 on win32)" generated="20240702 13:31:05.879" rpa="false" schemaversion="4">
 <suite id="s1" name="Examples" source="C:\Users\PC\Desktop\robot_framework\Examples">
-<suite id="s1-s1" name="My First Selenium" source="C:\Users\PC\Desktop\robot_framework\Examples\my_first_selenium.robot">
-<test id="s1-s1-t1" name="My Fisrt Selenium Robot Test" line="12">
-<kw name="Given the visitor go to &quot;https://demo.seleniumeasy.com/basic-first-form-demo.html&quot; on browser &quot;chrome&quot;" library="my_selenium_keywords" sourcename="the visitor go to &quot;${url}&quot; on browser &quot;${browser}&quot;">
+<suite id="s1-s1" name="My Second Selenium" source="C:\Users\PC\Desktop\robot_framework\Examples\my_second_selenium.robot">
+<test id="s1-s1-t1" name="User Management in OrangeHRM" line="20">
+<kw name="Given the visitor go to &quot;${URL}&quot; on browser &quot;${BROWSER}&quot;" sourcename="the visitor go to &quot;${url}&quot; on browser &quot;${browser}&quot;">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240702 11:42:55.146" level="INFO">Opening browser 'chrome' to base url 'https://demo.seleniumeasy.com/basic-first-form-demo.html'.</msg>
-<status status="PASS" starttime="20240702 11:42:55.146" endtime="20240702 11:42:59.822"/>
+<msg timestamp="20240702 13:31:06.263" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20240702 13:31:06.263" endtime="20240702 13:31:11.633"/>
 </kw>
-<status status="PASS" starttime="20240702 11:42:55.146" endtime="20240702 11:42:59.822"/>
+<status status="PASS" starttime="20240702 13:31:06.263" endtime="20240702 13:31:11.633"/>
 </kw>
-<kw name="When the visitor fills the first form" library="my_selenium_keywords">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@id="user-message"]</arg>
-<arg>${MESSAGE}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240702 11:42:59.822" level="INFO">Typing text 'Lorem Ipsum' into text field '//input[@id="user-message"]'.</msg>
-<status status="PASS" starttime="20240702 11:42:59.822" endtime="20240702 11:42:59.976"/>
+<kw name="When the visitor logs in with username &quot;${ADMIN_USERNAME}&quot; and password &quot;${ADMIN_PASSWORD}&quot;" sourcename="the visitor logs in with username &quot;${username}&quot; and password &quot;${password}&quot;">
+<msg timestamp="20240702 13:31:11.633" level="FAIL">Variable '${ADMIN_USERNAME}' not found.</msg>
+<status status="FAIL" starttime="20240702 13:31:11.633" endtime="20240702 13:31:11.633"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//button[text()="Show Message"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240702 11:42:59.976" level="INFO">Clicking element '//button[text()="Show Message"]'.</msg>
-<status status="PASS" starttime="20240702 11:42:59.976" endtime="20240702 11:43:00.058"/>
+<kw name="And the visitor adds a new user with employee name &quot;${EMPLOYEE_NAME}&quot;, username &quot;${USER_NAME}&quot;, password &quot;${USER_PASSWORD}&quot;, role &quot;${ROLE}&quot;, and status &quot;${STATUS}&quot;" sourcename="the visitor adds a new user with employee name &quot;${employee_name}&quot;, username &quot;${username}&quot;, password &quot;${password}&quot;, role &quot;${role}&quot;, and status &quot;${status}&quot;">
+<status status="NOT RUN" starttime="20240702 13:31:11.633" endtime="20240702 13:31:11.633"/>
 </kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>//*[@id="display"]</arg>
-<arg>${MESSAGE}</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20240702 11:43:00.092" level="INFO">Element '//*[@id="display"]' contains text 'Lorem Ipsum'.</msg>
-<status status="PASS" starttime="20240702 11:43:00.058" endtime="20240702 11:43:00.100"/>
+<kw name="Then the visitor should see the user &quot;${USER_NAME}&quot; in the user list" sourcename="the visitor should see the user &quot;${username}&quot; in the user list">
+<status status="NOT RUN" starttime="20240702 13:31:11.633" endtime="20240702 13:31:11.633"/>
 </kw>
-<status status="PASS" starttime="20240702 11:42:59.822" endtime="20240702 11:43:00.100"/>
+<kw name="When the visitor edits the user &quot;${USER_NAME}&quot; to role &quot;${NEW_ROLE}&quot;" sourcename="the visitor edits the user &quot;${username}&quot; to role &quot;${role}&quot;">
+<status status="NOT RUN" starttime="20240702 13:31:11.633" endtime="20240702 13:31:11.633"/>
 </kw>
-<kw name="And the visitor fills the second form" library="my_selenium_keywords">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//*[@id="value1"]</arg>
-<arg>${VALUE_1}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240702 11:43:00.100" level="INFO">Typing text '10' into text field '//*[@id="value1"]'.</msg>
-<status status="PASS" starttime="20240702 11:43:00.100" endtime="20240702 11:43:00.232"/>
+<kw name="Then the visitor should see the user &quot;${USER_NAME}&quot; with role &quot;${NEW_ROLE}&quot; in the user list" sourcename="the visitor should see the user &quot;${username}&quot; with role &quot;${role}&quot; in the user list">
+<status status="NOT RUN" starttime="20240702 13:31:11.641" endtime="20240702 13:31:11.641"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//*[@id="value2"]</arg>
-<arg>${VALUE_2}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240702 11:43:00.235" level="INFO">Typing text '5' into text field '//*[@id="value2"]'.</msg>
-<status status="PASS" starttime="20240702 11:43:00.232" endtime="20240702 11:43:00.363"/>
+<kw name="When the visitor deletes the user &quot;${USER_NAME}&quot;" sourcename="the visitor deletes the user &quot;${username}&quot;">
+<status status="NOT RUN" starttime="20240702 13:31:11.641" endtime="20240702 13:31:11.641"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//button[text()="Get Total"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240702 11:43:00.363" level="INFO">Clicking element '//button[text()="Get Total"]'.</msg>
-<status status="PASS" starttime="20240702 11:43:00.363" endtime="20240702 11:43:00.443"/>
+<kw name="Then the visitor should not see the user &quot;${USER_NAME}&quot; in the user list" sourcename="the visitor should not see the user &quot;${username}&quot; in the user list">
+<status status="NOT RUN" starttime="20240702 13:31:11.641" endtime="20240702 13:31:11.641"/>
 </kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>//*[@id="displayvalue"]</arg>
-<arg>${${VALUE_1}+${VALUE_2}}</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20240702 11:43:00.476" level="INFO">Element '//*[@id="displayvalue"]' contains text '15'.</msg>
-<status status="PASS" starttime="20240702 11:43:00.443" endtime="20240702 11:43:00.476"/>
+<kw name="And the visitor logs out">
+<status status="NOT RUN" starttime="20240702 13:31:11.641" endtime="20240702 13:31:11.641"/>
 </kw>
-<status status="PASS" starttime="20240702 11:43:00.100" endtime="20240702 11:43:00.476"/>
-</kw>
-<kw name="Then all values are correctly sended" library="my_selenium_keywords">
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${excepted_message}</var>
-<arg>//*[@id="display"]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240702 11:43:00.492" level="INFO">${excepted_message} = Lorem Ipsum</msg>
-<status status="PASS" starttime="20240702 11:43:00.476" endtime="20240702 11:43:00.492"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${excepted_value}</var>
-<arg>//*[@id="displayvalue"]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240702 11:43:00.518" level="INFO">${excepted_value} = 15</msg>
-<status status="PASS" starttime="20240702 11:43:00.492" endtime="20240702 11:43:00.518"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${excepted_message}</arg>
-<arg>${MESSAGE}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20240702 11:43:00.518" endtime="20240702 11:43:00.518"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${excepted_value}</arg>
-<arg>${${VALUE_1}+${VALUE_2}}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20240702 11:43:00.518" level="INFO">Argument types are:
-&lt;class 'str'&gt;
-&lt;class 'int'&gt;</msg>
-<status status="PASS" starttime="20240702 11:43:00.518" endtime="20240702 11:43:00.518"/>
-</kw>
-<status status="PASS" starttime="20240702 11:43:00.476" endtime="20240702 11:43:00.518"/>
-</kw>
-<tag>my_first_selenium</tag>
-<status status="PASS" starttime="20240702 11:42:55.146" endtime="20240702 11:43:00.518"/>
+<tag>user_management</tag>
+<status status="FAIL" starttime="20240702 13:31:06.263" endtime="20240702 13:31:11.641">Variable '${ADMIN_USERNAME}' not found.</status>
 </test>
-<status status="PASS" starttime="20240702 11:42:54.653" endtime="20240702 11:43:00.518"/>
+<status status="FAIL" starttime="20240702 13:31:05.912" endtime="20240702 13:31:11.641"/>
 </suite>
-<status status="PASS" starttime="20240702 11:42:54.612" endtime="20240702 11:43:00.527"/>
+<suite id="s1-s2" name="User Managment" source="C:\Users\PC\Desktop\robot_framework\Examples\user_managment.robot">
+<test id="s1-s2-t1" name="User Management Test" line="6">
+<kw name="Given I am on the OrangeHRM login page">
+<msg timestamp="20240702 13:31:11.657" level="FAIL">No keyword with name 'Given I am on the OrangeHRM login page' found.</msg>
+<status status="FAIL" starttime="20240702 13:31:11.657" endtime="20240702 13:31:11.657"/>
+</kw>
+<kw name="When I log in with username &quot;${ADMIN_USERNAME}&quot; and password &quot;${ADMIN_PASSWORD}&quot;">
+<status status="NOT RUN" starttime="20240702 13:31:11.665" endtime="20240702 13:31:11.665"/>
+</kw>
+<kw name="And I wait for 10 seconds">
+<status status="NOT RUN" starttime="20240702 13:31:11.665" endtime="20240702 13:31:11.665"/>
+</kw>
+<kw name="And I log out">
+<status status="NOT RUN" starttime="20240702 13:31:11.665" endtime="20240702 13:31:11.665"/>
+</kw>
+<tag>user_management</tag>
+<status status="FAIL" starttime="20240702 13:31:11.657" endtime="20240702 13:31:11.665">No keyword with name 'Given I am on the OrangeHRM login page' found.</status>
+</test>
+<status status="FAIL" starttime="20240702 13:31:11.649" endtime="20240702 13:31:11.665"/>
+</suite>
+<status status="FAIL" starttime="20240702 13:31:05.879" endtime="20240702 13:31:11.674"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">my_first_selenium</stat>
+<stat pass="0" fail="2" skip="0">user_management</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Examples">Examples</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="My First Selenium">Examples.My First Selenium</stat>
+<stat pass="0" fail="2" skip="0" id="s1" name="Examples">Examples</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="My Second Selenium">Examples.My Second Selenium</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s2" name="User Managment">Examples.User Managment</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20240702 13:31:05.921" level="ERROR">Error in file 'C:\Users\PC\Desktop\robot_framework\Examples\my_second_selenium.robot' on line 10: Setting variable '${ADMIN_USERNAME} Admin' failed: Invalid variable name '${ADMIN_USERNAME} Admin'.</msg>
+<msg timestamp="20240702 13:31:05.921" level="ERROR">Error in file 'C:\Users\PC\Desktop\robot_framework\Examples\my_second_selenium.robot' on line 11: Setting variable '${ADMIN_PASSWORD} admin123' failed: Invalid variable name '${ADMIN_PASSWORD} admin123'.</msg>
+<msg timestamp="20240702 13:31:06.263" level="ERROR">Error in file 'C:\Users\PC\Desktop\robot_framework\Examples\my_second_selenium.robot' on line 5: Resource file 'user_management_keywords.robot' does not exist.</msg>
+<msg timestamp="20240702 13:31:11.649" level="ERROR">Error in file 'C:\Users\PC\Desktop\robot_framework\Examples\user_managment.robot' on line 2: Resource file 'user_management_keywords.robot' does not exist.</msg>
+<msg timestamp="20240702 13:31:11.657" level="ERROR">Error in file 'C:\Users\PC\Desktop\robot_framework\Examples\user_managment.robot' on line 3: Processing variable file 'variables.robot' failed: Importing variable file 'variables.robot' failed: ModuleNotFoundError: No module named 'variables'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\PC\Desktop\robot_framework
+  C:\Python310\python310.zip
+  C:\Python310\DLLs
+  C:\Python310\lib
+  C:\Python310
+  C:\Users\PC\Desktop\robot_framework\.venv
+  C:\Users\PC\Desktop\robot_framework\.venv\lib\site-packages</msg>
 </errors>
 </robot>
