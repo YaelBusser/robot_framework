@@ -2,6 +2,7 @@
 Resource    side_bar_keywords.robot
 Resource    click_secondary_button_keywords.robot
 Resource    employe_managment_variables.robot
+Resource    logout_user_keywords.robot
 
 *** Keywords ***
 the user click on PIM
@@ -63,7 +64,9 @@ the user click on search button
     Sleep  3s
 
 the user click on edit button
-    Click Element  xpath=(//i[contains(@class, 'bi-pencil-fill')])[1]
+    Wait Until Element Is Visible  (//button)[8]
+    Click Element  xpath=(//button)[8]
+    Sleep    3s
 
 the user edit nickname for employee
     Wait Until Element Is Visible  (//input)[5]
@@ -74,6 +77,13 @@ the user click on save button for edit nickname
     Sleep  3s
 
 the user click on delete button
-    Click Element  xpath=(//button[contains(@class, 'oxd-icon bi-trash')])[1]
+    Click Element  xpath=(//button)[7]
+    Sleep  3s
 
+the user confirm delete user employe
+    Wait Until Element Is Visible    xpath=//button[contains(@class, 'oxd-button--label-danger') and contains(., 'Yes, Delete')]
+    Click Button    xpath=//button[contains(@class, 'oxd-button--label-danger') and contains(., 'Yes, Delete')]
+    Sleep    10s
 
+the user logout
+    Click Logout

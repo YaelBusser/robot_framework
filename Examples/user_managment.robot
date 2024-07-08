@@ -19,3 +19,16 @@ User Management
     And the visitor clicks on the login button
     # Step 5 : Vérifier que la connexion est réussie
     Then the user should see the dashboard
+
+    And the user clicks on the Admin button
+    Then the user clicks on the Add button
+    And the user selects ESS from the dropdown
+    And the user types '${EMPLOYEE_NAME}' and selects the first autocomplete suggestion
+    And the user selects ${STATUS} from the Status dropdown
+    Then the user types '${NEW_USERNAME}' in the username input
+    Then the user types '${NEW_PASSWORD}' in the password & confirm password input
+    Then the user saves the new user
+    the user types '${NEW_USERNAME}' in the search input
+    the user search for the new user
+    the user delete the new user
+    the user logout

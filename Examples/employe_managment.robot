@@ -36,8 +36,13 @@ User Management
     Then the user should see the PIM title
     And the user enters employee name
     And the user click on search button
+    And the user click on edit button
     Then the user edit nickname for employee
     And the user click on save button for edit nickname
     And the user click on PIM
     Then the user should see the PIM title
+    And the user enters employee name
+    And the user click on search button
     And the user click on delete button
+    Then the user confirm delete user employe
+    And the user logout
